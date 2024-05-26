@@ -19,6 +19,7 @@ class Category extends StatelessWidget {
                 ));
           },
           child: Ink(
+            padding: const EdgeInsets.all(16),
             child: Center(
               child: Image.asset('$imagePatch$category.png'),
             ),
