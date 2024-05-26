@@ -1,7 +1,7 @@
 # Clean Arch Flutter
 Flutter: practicing and adapting clean architecture - Alura
 
-# Stack used
+# Stack
 **Flutter SDK:** version 3.22
 
 **Dart SDK:** version: 3.4.0
