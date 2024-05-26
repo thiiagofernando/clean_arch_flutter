@@ -34,7 +34,19 @@ class Details extends StatelessWidget {
                         child: Chip(label: Text(e))))
                     .toList(),
               ),
-              Image.network(entry.image),
+              const SizedBox(
+                height: 10,
+              ),
+              SizedBox(
+                width: MediaQuery.of(context).size.width,
+                child: Image.network(
+                  entry.image,
+                  fit: BoxFit.fitWidth,
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
               Text(entry.description),
             ],
           ),

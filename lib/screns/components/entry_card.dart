@@ -35,27 +35,32 @@ class EntryCard extends StatelessWidget {
                 );
               },
               child: Ink(
-                padding: const EdgeInsets.all(12),
-                child: Flexible(
-                  child: Column(
-                    children: [
-                      Image.network(entry.image),
-                      const SizedBox(
-                        height: 20,
+                padding: const EdgeInsets.all(8),
+                child: Column(
+                  children: [
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width,
+                      child: Image.network(
+                        entry.image,
+                        fit: BoxFit.fitWidth,
                       ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: [
-                          Text(
-                            entry.name.toUpperCase(),
-                            style: const TextStyle(
-                                fontSize: 16, fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Column(
+                      children: [
+                        Text(
+                          entry.name.toUpperCase(),
+                          style: const TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
                           ),
-                          Text(entry.description),
-                        ],
-                      )
-                    ],
-                  ),
+                        ),
+                        Text(entry.description),
+                      ],
+                    )
+                  ],
                 ),
               ),
             ),
